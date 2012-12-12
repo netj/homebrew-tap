@@ -1,6 +1,6 @@
 netj's Homebrew-tap
 ===================
-Here are some of my formulae that didn't/couldn't get into the main repository.
+Here are some of my formulae that didn't/couldn't get into the [main repository][homebrew].
 
 How do I install these formulae?
 --------------------------------
@@ -18,4 +18,5 @@ Docs
 ----
 `brew help`, `man brew`, or the Homebrew [wiki][].
 
+[homebrew]:http://github.com/mxcl/homebrew
 [wiki]:http://wiki.github.com/mxcl/homebrew
