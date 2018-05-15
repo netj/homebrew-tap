@@ -14,7 +14,7 @@ class Mutt < Formula
   #revision 1
 
   bottle do
-    revision 1
+    #revision 1
     sha1 "5aa656ffd793e57b26642b82c514e0195e32dd1e" => :mavericks
     sha1 "56302c5553e7bf5b31db3720ab22c6343c11c428" => :mountain_lion
     sha1 "8b7dad42c73723e25cb874e2654c8754218f580a" => :lion
