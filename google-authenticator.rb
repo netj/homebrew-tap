@@ -2,7 +2,7 @@ require 'formula'
 
 class GoogleAuthenticator < Formula
   url 'http://google-authenticator.googlecode.com/files/libpam-google-authenticator-1.0-source.tar.bz2'
-  sha1 '017b7d89989f1624e360abe02d6b27a6298d285d'
+  #sha1 '017b7d89989f1624e360abe02d6b27a6298d285d'
   head 'https://code.google.com/p/google-authenticator/', :using => :git
   homepage 'http://code.google.com/p/google-authenticator/'
 
