@@ -3,9 +3,9 @@ class Remocon < Formula
   homepage "https://github.com/netj/remocon#readme"
   head "https://github.com/netj/remocon.git"
 
-  url "https://github.com/netj/remocon/archive/v0.2.0.tar.gz"
-  sha256 "d582c0fb2d691d99a29ac28048803dfcb11e4390c20f3654cc1684b6a3360408"
-  version "0.2.0"
+  url "https://github.com/netj/remocon/archive/v0.2.1.tar.gz"
+  sha256 "55cf0c6b2d05c8dfe170edf2492d9e25e9ae936bf13366185d884fcdf57590c7"
+  version "0.2.1"
 
   depends_on "rsync" => :optional
 
