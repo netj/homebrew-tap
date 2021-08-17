@@ -1,7 +1,7 @@
 class Remocon < Formula
   desc "a tool for controlling remote host's clones of local git work trees"
   homepage "https://github.com/netj/remocon#readme"
-  head "https://github.com/netj/remocon.git"
+  head "https://github.com/netj/remocon.git", branch: "main"
 
   url "https://github.com/netj/remocon/archive/v0.5.0.tar.gz"
   sha256 "dbb55ca546cdb0d4445c43802a489651e0f3c57fbb82bbe78a93665669377dde"
