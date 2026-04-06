@@ -3,9 +3,9 @@ class Wtcode < Formula
   homepage "https://github.com/netj/wtcode#readme"
   head "https://github.com/netj/wtcode.git", branch: "main"
 
-  url "https://github.com/netj/wtcode/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "960689f370d999c8a938d108d0d44450334ff2c2c888d8a359fcf4c99d28b41f"
-  version "0.1.2"
+  url "https://github.com/netj/wtcode/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "a253c2fe80b0faf177b97781bf7b252abc1953cbef864e217364d68e80aab206"
+  version "0.1.3"
   license "MIT"
 
   depends_on "fzf" => :recommended
