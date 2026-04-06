@@ -1,0 +1,28 @@
+class Optmux < Formula
+  desc "Optimal, opinionated, batteries-included TMUX — recommended extras"
+  homepage "https://github.com/netj/optmux#readme"
+  url "https://github.com/netj/optmux/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "08b77bcb4f4a6627b4a7924d9bf8f1dbe457e5a2532b67c68ab4aa9753e233e9"
+  version "0.1.0"
+  license "MIT"
+
+  depends_on "netj/tap/wtcode"
+  depends_on "lazygit"
+
+  def install
+    # optmux itself is installed via: uvx optmux
+    # This formula provides the recommended companion tools.
+    pkgshare.install "README.md"
+  end
+
+  def caveats
+    <<~EOS
+      optmux itself is installed via: uvx optmux
+      This formula installs recommended tools (wtcode, lazygit).
+    EOS
+  end
+
+  test do
+    assert_predicate pkgshare/"README.md", :exist?
+  end
+end
