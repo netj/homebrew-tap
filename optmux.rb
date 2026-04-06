@@ -6,23 +6,19 @@ class Optmux < Formula
   version "0.1.2"
   license "MIT"
 
+  depends_on "uv"
   depends_on "netj/tap/wtcode"
   depends_on "lazygit"
 
   def install
-    # optmux itself is installed via: uvx optmux
-    # This formula provides the recommended companion tools.
-    pkgshare.install "README.md"
-  end
-
-  def caveats
-    <<~EOS
-      optmux itself is installed via: uvx optmux
-      This formula installs recommended tools (wtcode, lazygit).
-    EOS
+    # Install a wrapper that delegates to uvx
+    (bin/"optmux").write <<~SH
+      #!/bin/sh
+      exec uvx optmux "$@"
+    SH
   end
 
   test do
-    assert_predicate pkgshare/"README.md", :exist?
+    system bin/"optmux", "--help"
   end
 end
