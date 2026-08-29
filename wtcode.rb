@@ -3,9 +3,9 @@ class Wtcode < Formula
   homepage "https://pypi.org/project/wtcode/"
   head "https://github.com/netj/wtcode.git", branch: "main"
 
-  url "https://github.com/netj/wtcode/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "7cc553c20560a81ff8b5035ae662684dd9ec1e7e18a341eeab04833cf56239a1"
-  version "0.3.0"
+  url "https://github.com/netj/wtcode/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "3ba3bf3d7e482e8f875e58cad49208594f7986c848311da4ae9ba50050182a2e"
+  version "0.4.0"
   license "MIT"
 
   depends_on "fzf" => :recommended
