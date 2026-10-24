@@ -6,19 +6,27 @@ class Optmux < Formula
   version "0.11.0"
   license "MIT"
 
-  depends_on "uv"
+  depends_on "uv" => :build
+  depends_on "python@3.13"
   depends_on "netj/tap/wtcode"
   depends_on "lazygit"
 
   def install
-    # Install a wrapper that delegates to uvx
-    (bin/"optmux").write <<~SH
-      #!/bin/sh
-      exec uvx optmux "$@"
-    SH
+    # Install into a private venv from the tarball itself, with dependencies
+    # pinned (and hash-verified) by uv.lock, so runtime never needs PyPI.
+    python = Formula["python@3.13"].opt_bin/"python3.13"
+    venv = libexec/"venv"
+    system "uv", "venv", "--python", python, venv
+    system "uv", "export", "--frozen", "--no-emit-project", "--no-dev",
+           "--format", "requirements-txt", "-o", "requirements.txt"
+    system "uv", "pip", "install", "--python", venv/"bin/python",
+           "--require-hashes", "--no-deps", "-r", "requirements.txt"
+    system "uv", "pip", "install", "--python", venv/"bin/python",
+           "--no-deps", "--no-cache", "."
+    bin.install_symlink venv/"bin/optmux"
   end
 
   test do
-    system bin/"optmux", "--help"
+    system libexec/"venv/bin/python", "-c", "import optmux.cli, tmuxp"
   end
 end
