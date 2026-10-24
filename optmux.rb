@@ -7,7 +7,7 @@ class Optmux < Formula
   license "MIT"
 
   depends_on "uv" => :build
-  depends_on "python@3.13"
+  depends_on "python@3.15"
   depends_on "netj/tap/wtcode"
   depends_on "lazygit"
 
@@ -17,7 +17,7 @@ class Optmux < Formula
     ENV["UV_PROJECT_ENVIRONMENT"] = libexec.to_s
     ENV["UV_PYTHON_DOWNLOADS"] = "never"
     system "uv", "sync", "--frozen", "--no-dev", "--no-editable",
-           "--python", Formula["python@3.13"].opt_bin/"python3.13"
+           "--python", Formula["python@3.15"].opt_bin/"python3.15"
     bin.install_symlink libexec/"bin/optmux"
   end
 
