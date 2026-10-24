@@ -22,6 +22,6 @@ class Optmux < Formula
   end
 
   test do
-    system libexec/"bin/python", "-c", "import optmux.cli, tmuxp, yaml"
+    assert_match version.to_s, shell_output("#{bin}/optmux -v")
   end
 end
