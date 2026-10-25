@@ -8,8 +8,13 @@ class Optmux < Formula
 
   depends_on "uv" => :build
   depends_on "python@3.15"
+  depends_on "tmux"
   depends_on "netj/tap/wtcode"
   depends_on "lazygit"
+  depends_on "git-delta"
+  depends_on "less" # recent less for --mouse and clickable OSC 8 links
+  depends_on "fzf"
+  depends_on "gh"
 
   def install
     # Self-contained venv with dependencies pinned by uv.lock; nothing is
