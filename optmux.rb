@@ -1,9 +1,9 @@
 class Optmux < Formula
   desc "Optimal, opinionated, batteries-included TMUX — recommended extras"
   homepage "https://pypi.org/project/optmux/"
-  url "https://github.com/netj/optmux/archive/refs/tags/v0.13.2.tar.gz"
-  sha256 "5a7c8ae676340b0f891758d57fe7b73056244c130aff35bdbab7cce321d00b97"
-  version "0.13.2"
+  url "https://github.com/netj/optmux/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "08863d655786e671e1719f8a2db7a113877283fbd3658ce346db0f85f7e2ed8e"
+  version "0.14.0"
   license "MIT"
 
   depends_on "uv" => :build
@@ -14,6 +14,7 @@ class Optmux < Formula
   depends_on "git-delta"
   depends_on "less" # recent less for --mouse and clickable OSC 8 links
   depends_on "fzf"
+  depends_on "universal-ctags" # tags for optmux Find (C-M-f)
   depends_on "gh"
 
   def install
