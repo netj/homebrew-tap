@@ -1,9 +1,9 @@
 class Optmux < Formula
   desc "Optimal, opinionated, batteries-included TMUX — recommended extras"
   homepage "https://pypi.org/project/optmux/"
-  url "https://github.com/netj/optmux/archive/refs/tags/v0.18.0.tar.gz"
-  sha256 "628a0cbae0fe03cf51b5e21fd6301da59596412eea06264c88fafca0d631cb88"
-  version "0.18.0"
+  url "https://github.com/netj/optmux/archive/refs/tags/v0.18.1.tar.gz"
+  sha256 "7190d61a2616ab5446ac654c84ddc62af427afb27e7be56d34fb52ab8ce9633d"
+  version "0.18.1"
   license "MIT"
 
   depends_on "uv" => :build
